@@ -213,7 +213,7 @@ public abstract class BaseComponentSpec implements ComponentSpecInternal {
         binaries.ensureUsable();
         return binaries.asWritable(
             ModelTypes.modelMap(BinarySpecInternal.PUBLIC_MODEL_TYPE),
-            RuleContext.nest(identifier.toString() + ".getBinaries()"),
+            RuleContext.nest(getName() + ".getBinaries()"),
             Collections.<ModelView<?>>emptyList()
         ).getInstance();
     }
